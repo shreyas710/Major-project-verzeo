@@ -1,0 +1,98 @@
+body {
+	background-color:rgb(18, 89, 136);
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	background-color: rgb(61, 61, 61);
+	height: 90px;
+	position: relative;
+	top: 0px;
+}
+
+.text h4 {
+	padding-top: 25px;
+	text-align: center;
+    font-size: xx-large;
+    margin-top: 0px;
+    color: white;
+}
+
+main {
+	height: 600px;
+	width: 600px;
+	position: relative;
+	left: 490px;
+	top: 10px;
+}
+
+main .text1 {
+	position: relative;
+    top: 80px;
+    left: 210px;
+}
+
+main .reg {
+	position: relative;
+	top: 320px;
+	left: 210px;
+}
+
+main .getemail{
+	position: relative;
+    top: 170px;
+    left: 90px;
+}
+
+main .getemail .inputemail input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color:rgb(18, 89, 136);
+    width: 400px;
+    height: 20px;
+    font-size: large;
+    color: white;
+}
+
+main .getpass{
+    position: relative;
+    top: 240px;
+    left: 90px;
+}
+
+main .getpass .inputpass input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: rgb(18, 89, 136);
+    width: 400px;
+    height: 20px;
+    font-size: large;
+    color: white;
+}
+
+main .getemail .text{
+    font-size: large;
+}
+
+main .getpass .text{
+    font-size: large;
+}
+
+main .submitbutton{
+    position: relative;
+    top: 300px;
+    left: 190px;
+}
+
+main .submitbutton input{
+    width: 200px;
+    height: 35px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    font-size: large;
+}
