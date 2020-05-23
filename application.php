@@ -1,3 +1,13 @@
+<?php
+   session_start();
+
+   if(isset($_SESSION['errorMessage11'])){
+       echo "<script type='text/javascript'>
+               alert('" . $_SESSION['errorMessage11'] . "');
+             </script>";
+   }
+?>
+
 <html>
     <head>
     <meta charset="UTF-8">
@@ -6,20 +16,19 @@
     </head>
     <style>
         body{background-color: rgb(18,89,86)}
-        /*nav{background-color: black ,height: 50px}*/
         form{color: white}
-        
     </style>
     <body>
         <nav>
             <b style="color: red">APPLICATION FORM</b>
         </nav>
-        <form method="POST" action="processapp.php">
-            First Name : <input type="text" name="firstname" ><br><br>
+        <form method="POST" action="processapp.php" onsubmit="return validateForm()">
+            First Name : <input type="text" name="firstname"><br><br>
             Last Name : <input type="text" name="lastname"><br><br>
             Email : <input type="email" name="email" value="<?php
-                session_start();
+                // session_start();
                 echo ($_SESSION['email']);
+                session_unset();
             ?>" readonly><br><br>
             Age : <input type="number" name="age"><br><br>
             Date Of Birth : <input type="text" name="dateofbirth"><br><br>

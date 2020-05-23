@@ -12,7 +12,7 @@
         header("Location: index.php");
 	} else {
         session_start();
-        $_SESSION['errorMessage'] = "Login successful";
+        $_SESSION['errorMessage11'] = "Login successful";
         $_SESSION['email'] = $ma;
 		header("Location: application.php");
     }

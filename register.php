@@ -34,7 +34,7 @@
         <div class="text1">
             <h3><u>ENTER DETAILS</u></h3>
         </div>
-        <form action="processreg.php" method="post">
+        <form name = "myform" action="processreg.php" method="post" onsubmit="return validateForm()">
             <div class="getemail">
                 <div class="inputemail">
                     <input type="email" name="mail">    
@@ -67,5 +67,17 @@
             Already a user ? <a href="index.php">Login</a>
         </div>
     </main>
+    <script>
+        function validateForm() {
+            var x = document.forms["myform"]["mail"].value;
+            var y = document.forms["myform"]["pass"].value;
+            var z = document.forms["myform"]["pass1"].value;
+            if (x == "" || y == "" || z == "") {
+                alert("Form not filled");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
