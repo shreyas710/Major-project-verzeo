@@ -13,7 +13,8 @@
 	} else {
         session_start();
         $_SESSION['errorMessage'] = "Login successful";
-		header("Location: loan.php");
-	}
+        $_SESSION['email'] = $ma;
+		header("Location: application.php");
+    }
+    mysqli_close($conn);
 ?>
-

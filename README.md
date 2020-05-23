@@ -1,7 +1,4 @@
 # Major-project-verzeo
 Loan details form
-
-1)For user login and registeration
-Create a database named 'projectdatabase'
-create a table with name 'users' and fields 'Email' and 'Password' (notice capital E and P)
-Run main.php
+import the sql file in database
+admin login(in admin login webpage) - admin@admin.com   root
