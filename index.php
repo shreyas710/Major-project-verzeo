@@ -1,3 +1,21 @@
+<?php
+   session_start();
+
+   if(isset($_SESSION['errorMessage'])){
+       echo "<script type='text/javascript'>
+               alert('" . $_SESSION['errorMessage'] . "');
+             </script>";
+        session_unset();
+   }
+   if(isset($_SESSION['errorMessage1'])){
+        echo "<script type='text/javascript'>
+        alert('" . $_SESSION['errorMessage1'] . "');
+        </script>";
+        session_unset();
+   }
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
