@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.6s;
+}
+
+nav{
+    text-align: center;
+    background-color: rgb(61, 61, 61);
+	height: 90px;
+	position: relative;
+	top: 0px;
+}
+
+form{
+    position: relative;
+    left: 100px;
+    width: 600px;
+}
+
+.text h4{
+    padding-top: 25px;
+	text-align: center;
+    font-size: xx-large;
+    margin-top: 0px;
+    color: white;
+}
+
+.text1,.text2, .text3, .text4, .text5, .text6, .text7, .text8, .text9{
+    position: relative;
+    top: 20px;
+}
+
+.text1 input, .text2 input, .text3 input, .text4 input, .text5 input, .text6 input, .text7 input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    width: 400px;
+    height: 35px;
+    font-size: medium;
+}  
+
+#purpose{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    width: 400px;
+    height: 35px;
+    font-size: medium;
+}
+
+.text9 label{
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+.text9 input{
+    color: white;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+.text9 .one{
+    position: relative;
+    right: 10px;
+}
+
+.submitbutton input{
+    width: 200px;
+    height: 35px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    font-size: large;
+}

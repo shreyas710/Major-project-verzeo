@@ -1,6 +1,4 @@
 body {
-	background-color:rgb(18, 89, 136);
-	margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 0.6s;
 }
@@ -51,11 +49,9 @@ main .getemail .inputemail input {
 	border-right-style: hidden;
 	border-left-style: hidden;
     border-bottom-style: groove;
-    background-color:rgb(18, 89, 136);
     width: 400px;
-    height: 20px;
+    height: 35px;
     font-size: large;
-    color: white;
 }
 
 main .getpass{
@@ -69,18 +65,12 @@ main .getpass .inputpass input {
 	border-right-style: hidden;
 	border-left-style: hidden;
     border-bottom-style: groove;
-    background-color: rgb(18, 89, 136);
     width: 400px;
-    height: 20px;
-    font-size: large;
-    color: white;
-}
-
-main .getemail .text{
+    height: 35px;
     font-size: large;
 }
 
-main .getpass .text{
+main .getemail .text, .getpass .text{
     font-size: large;
 }
 

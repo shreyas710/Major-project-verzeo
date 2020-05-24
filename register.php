@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <link rel="stylesheet" href="register.css">
+    <?php include 'links.php'?>
 </head>
 <body>
     <header>
@@ -31,13 +32,10 @@
         </div>
     </header>
     <main>
-        <div class="text1">
-            <h3><u>ENTER DETAILS</u></h3>
-        </div>
         <form name = "myform" action="processreg.php" method="post" onsubmit="return validateForm()">
             <div class="getemail">
                 <div class="inputemail">
-                    <input type="email" name="mail">    
+                    <input type="email" name="mail" class="form-control" autocomplete="off">    
                 </div>
                 <div class="text">
                     Email
@@ -45,7 +43,7 @@
             </div>
             <div class="getpass">
                 <div class="inputpass">
-                    <input type="password" name="pass">    
+                    <input type="password" name="pass" class="form-control" autocomplete="off">    
                 </div>
                 <div class="text">
                     Password
@@ -53,16 +51,17 @@
             </div>
             <div class="getpass1">
                 <div class="inputpass">
-                    <input type="password" name="pass1">    
+                    <input type="password" name="pass1" class="form-control" autocomplete="off">    
                 </div>
                 <div class="text">
                     Confirm Password
                 </div>
             </div>
             <div class="submitbutton">
-                <input type="submit" value="SUBMIT">
+                <input type="submit" value="SUBMIT" class="btn btn-success">
             </div>
         </form>
+        <br>
         <div class="reg">
             Already a user ? <a href="index.php">Login</a>
         </div>

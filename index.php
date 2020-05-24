@@ -13,7 +13,6 @@
         </script>";
         session_unset();
    }
-   
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="index.css">
+    <?php include 'links.php'?>
 </head>
 <body>
     <header>
@@ -31,13 +31,10 @@
         </div>
     </header>
     <main>
-        <div class="text1">
-            <h3><u>ENTER DETAILS</u></h3>
-        </div>
         <form name = "myform" action="process.php" method="post" onsubmit="return validateForm()">
             <div class="getemail">
                 <div class="inputemail">
-                    <input type="email" name="mail">    
+                    <input type="email" name="mail" class="form-control" autocomplete="off">    
                 </div>
                 <div class="text">
                     Email
@@ -45,16 +42,17 @@
             </div>
             <div class="getpass">
                 <div class="inputpass">
-                    <input type="password" name="pass">    
+                    <input type="password" name="pass" class="form-control" autocomplete="off">    
                 </div>
                 <div class="text">
                     Password
                 </div>
             </div>
             <div class="submitbutton">
-                <input type="submit" value="SUBMIT">
+                <input type="submit" value="SUBMIT" class="btn btn-success">
             </div>
         </form>
+
         <div class="reg">
             New Here ? <a href="register.php">Register</a>
         </div>
