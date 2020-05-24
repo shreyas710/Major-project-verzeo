@@ -1,4 +1,2 @@
-# Major-project-verzeo
-Loan details form
-import the sql file in database
-admin login(in admin login webpage) - admin@admin.com   root
+First Run the projectdatabase.sql file 
+and then main.php file
