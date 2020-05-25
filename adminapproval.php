@@ -15,13 +15,13 @@ session_start();
     <style>
         tr{
             text-align: center;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: bold;
             color: blue; 
         }
         th{
             text-align: center;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
             color: brown; 
         }
@@ -60,7 +60,9 @@ $result=mysqli_query($conn,$query);
 
 $i = 1; //counter for the checkboxes so that each has a unique name
 echo "<form method='post'>"; //form started here
-echo "<table border='7' cellpadding='8' cellspacing='8' color='white' bordercolor='black' bgcolor='lightgreen'>
+echo "<table border='7' cellpadding='8' cellspacing='8' color='white' bordercolor='black' bgcolor='lightgreen' 
+style='table-layout: fixed;
+width: 100%;'>
 <tr>
 <th>First Name</th>
 <th>Last Name</th>
@@ -80,16 +82,16 @@ while($row = mysqli_fetch_array($result))
 {
     $ma = $row['email'];
     echo "<tr>";
-    echo "<td>" . $row['firstname'] . "</td>";
-    echo "<td>" . $row['lastname'] . "</td>";
-    echo "<td>" . $row['email'] . "</td>";
-    echo "<td>" . $row['age'] . "</td>";
-    echo "<td>" . $row['dateofbirth'] . "</td>";
-    echo "<td>" . $row['monthlyincome'] . "</td>";
-    echo "<td>" . $row['loanamountneeded'] . "</td>";
-    echo "<td>" . $row['purpose'] . "</td>";
-    echo "<td>" . $row['tenure'] . "</td>";
-    echo "<td>" . $row['approval'] . "</td>";
+    echo "<td style='word-wrap: break-word; word-break: break-all;'>" . $row['firstname'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['lastname'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['email'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['age'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['dateofbirth'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['monthlyincome'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['loanamountneeded'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['purpose'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['tenure'] . "</td>";
+    echo "<td style='word-break: break-all;'>" . $row['approval'] . "</td>";
     echo "<td><input type='submit' name='approve' value='Approve' id = $ma onclick='updatedata(this.id)'></td>";
     echo "<td><input type='submit' name='reject' value='Reject' id = $ma onclick='updatedata1(this.id)'></td>";
     echo "</tr>";
@@ -107,7 +109,6 @@ echo "</form>";
     function updatedata(id){
 
         trid=id;
-        // alert(trid);
 
         $.ajax({
             url: "updateacc.php",
@@ -116,9 +117,7 @@ echo "</form>";
 
 
             success: function(result){
-                // alert(result);
                 $('table#sHold tr#'+trid).remove();
-                alert('Updated');
 
         }
         });
@@ -127,7 +126,6 @@ echo "</form>";
 
     function updatedata1(id){
         trid=id;
-        // alert(trid);
 
         $.ajax({
         url: "updaterej.php",
@@ -136,10 +134,7 @@ echo "</form>";
 
 
         success: function(result){
-            // alert(result);
             $('table#sHold tr#'+trid).remove();
-            alert('Updated');
-
         }
         });
     }

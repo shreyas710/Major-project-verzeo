@@ -26,11 +26,11 @@
             $_SESSION['loanamountneededapp2'] = $row['loanamountneeded']; 
             $_SESSION['purposeapp2'] = $row['purpose'];
             $_SESSION['tenureapp2'] = $row['tenure'];
-            $_SESSION['errorMessage11'] = "Login successful";
+            $_SESSION['errorMessage11'] = "Login successfull";
             header("Location: application2.php");
         }else{
             session_start();
-            $_SESSION['errorMessage11'] = "Login successful";
+            $_SESSION['errorMessage11'] = "Login successfull";
             $_SESSION['email'] = $ma;
             header("Location: application.php");
         }

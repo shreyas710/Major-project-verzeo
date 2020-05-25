@@ -80,13 +80,13 @@ main .getpass .text{
 
 main .submitbutton{
     position: relative;
-    top: 320px;
+    top: 340px;
     left: 190px;
 }
 
 main .submitbutton input{
     width: 200px;
-    height: 35px;
+    height: 40px;
     background-color: rgb(61, 61, 61);
     color: white;
     font-size: large;

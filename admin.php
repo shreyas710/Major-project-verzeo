@@ -1,5 +1,12 @@
 <?php
     $conn=mysqli_connect('localhost','root');
+    session_start();
+    if(isset($_SESSION['message1'])){
+        echo "<script type='text/javascript'>
+                alert('" . $_SESSION['message1'] . "');
+              </script>";
+         session_unset();
+    }
 ?> 
 
 <!DOCTYPE html>
@@ -19,7 +26,7 @@
 
                  <div class="container row d-flex flex-row justify-content-center mb-5">
                  <div class="admin-form shadow p-2">
-                 <form action="processadmin.php" method="POST">
+                 <form name = "myform" action="processadmin.php" method="POST" onsubmit="return validateForm()">
                  <div class="form-group">
                  <label >Email ID</label>
                  <input type="text" name="user" value="" class="form-control" autocomplete="off">
@@ -34,6 +41,17 @@
                  </div>
                  </div>
             </div>
+            <script>
+                function validateForm() {
+                    var x = document.forms["myform"]["user"].value;
+                    var y = document.forms["myform"]["pass"].value;
+                    if (x == "" || y == "") {
+                        alert("Form not filled");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
         </header>
     </body>
 </html>

@@ -15,12 +15,12 @@ if(isset($_POST['submit'])){
 
     $row= mysqli_num_rows($query);
         if($row == 1){
-            $_SESSION['message'] = "Login Successful";
+            $_SESSION['message'] = "Login Successfull";
             $_SESSION['user']= $username;
             header('location: adminapproval.php');
         }
         else{
-            $_SESSION['message'] = "Login Failed";
+            $_SESSION['message1'] = "Login Failed";
             header('location: admin.php');
         }
     

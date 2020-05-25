@@ -1,13 +1,13 @@
 <?php
    session_start();
-   if(isset($_SESSION['message1']) && isset($_SESSION['errorMessage11'])){
+   if(isset($_SESSION['errorMessage11'])){
     echo "<script type='text/javascript'>
     alert('" . $_SESSION['errorMessage11'] . "');
     </script>";
 }
-   else if(isset($_SESSION['message1'])){
+   else if(isset($_SESSION['message3'])){
     echo "<script type='text/javascript'>
-            alert('" . $_SESSION['message1'] . "');
+            alert('" . $_SESSION['message3'] . "');
           </script>";
     }
     

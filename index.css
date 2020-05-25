@@ -82,7 +82,7 @@ main .submitbutton{
 
 main .submitbutton input{
     width: 200px;
-    height: 35px;
+    height: 40px;
     background-color: rgb(61, 61, 61);
     color: white;
     font-size: large;

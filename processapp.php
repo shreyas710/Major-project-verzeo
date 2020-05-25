@@ -25,7 +25,7 @@ if(isset($_POST['save']))
           $_SESSION['loanamountneededapp2'] = $_POST['loanamountneeded'];
           $_SESSION['purposeapp2'] = $_POST['purpose'];
           $_SESSION['tenureapp2'] = $_POST['tenure'];
-          $_SESSION['message1'] = "New Application created successfully";
+          $_SESSION['message3'] = "New Application created successfully";
           header("Location: application2.php");
      }
      mysqli_close($conn);

@@ -35,25 +35,25 @@
         <form name = "myform" action="processreg.php" method="post" onsubmit="return validateForm()">
             <div class="getemail">
                 <div class="inputemail">
-                    <input type="email" name="mail" class="form-control" autocomplete="off">    
+                    <input type="email" name="mail" class="form-control" autocomplete="off"  placeholder = "Enter Email">    
                 </div>
-                <div class="text">
+                <div class="text" style="position: relative; left: 12px;">
                     Email
                 </div>
             </div>
             <div class="getpass">
                 <div class="inputpass">
-                    <input type="password" name="pass" class="form-control" autocomplete="off">    
+                    <input type="password" name="pass" class="form-control" autocomplete="off" placeholder = "Enter Password">    
                 </div>
-                <div class="text">
+                <div class="text" style="position: relative; left: 12px;">
                     Password
                 </div>
             </div>
             <div class="getpass1">
                 <div class="inputpass">
-                    <input type="password" name="pass1" class="form-control" autocomplete="off">    
+                    <input type="password" name="pass1" class="form-control" autocomplete="off" placeholder = "Repeat Password">    
                 </div>
-                <div class="text">
+                <div class="text" style="position: relative; left: 12px;">
                     Confirm Password
                 </div>
             </div>
