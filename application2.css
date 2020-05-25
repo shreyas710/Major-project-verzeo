@@ -48,14 +48,16 @@ form{
     font-size: medium;
 } 
 
-.status input{
+.status {
+    border: 1px solid green;
+    width: 300px;
     position: relative;
-    top: -885px;
-    width: 200px;
-    height: 35px;
-    background-color: rgb(61, 61, 61);
-    color: white;
-    font-size: large;
+    height: 60px;
+    left: 500px;
+    top: -900px;
     text-align: center;
-    left: 1000px;
+    padding-top: 5px;
+    color: green;
+    background-color: aqua;
+    font-size: xx-large;
 }

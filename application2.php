@@ -1,15 +1,16 @@
 <?php
    session_start();
-   if(isset($_SESSION['message'])){
+   if(isset($_SESSION['message1']) && isset($_SESSION['errorMessage11'])){
     echo "<script type='text/javascript'>
-            alert('" . $_SESSION['message'] . "');
+    alert('" . $_SESSION['errorMessage11'] . "');
+    </script>";
+}
+   else if(isset($_SESSION['message1'])){
+    echo "<script type='text/javascript'>
+            alert('" . $_SESSION['message1'] . "');
           </script>";
-}
-if(isset($_SESSION['errorMessage11'])){
-     echo "<script type='text/javascript'>
-     alert('" . $_SESSION['errorMessage11'] . "');
-     </script>";
-}
+    }
+    
 ?>
 
 <html>
@@ -100,13 +101,13 @@ if(isset($_SESSION['errorMessage11'])){
                 }
             ?>" readonly class="form-control" autocomplete="off"></div>
             <div class="status">
-                <input type="text" value="<?php
-                if(isset($_SESSION['status'])){
-                    echo ($_SESSION['status']);
-                }else{
-                    echo "PENDING";
-                }
-            ?>" readonly>
+                <?php
+                    include_once("database.php");
+                    $records = mysqli_query($conn,"select * from loan_application where email = '$_SESSION[emailapp2]'");
+                    $data = mysqli_fetch_array($records);
+                    echo ($data['approval']);
+                    mysqli_close($conn);
+                ?>
             </div>
             <br>
             <br>

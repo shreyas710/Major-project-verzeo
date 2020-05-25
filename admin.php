@@ -1,15 +1,5 @@
 <?php
-session_start();
-
-$conn=mysqli_connect('localhost','root');
-
-if(isset($_SESSION['message'])){
-    echo "<script type='text/javascript'>
-        alert('" . $_SESSION['message'] . "');
-        </script>";
-        session_unset();
-}
-
+    $conn=mysqli_connect('localhost','root');
 ?> 
 
 <!DOCTYPE html>

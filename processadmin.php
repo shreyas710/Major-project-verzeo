@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         if($row == 1){
             $_SESSION['message'] = "Login Successful";
             $_SESSION['user']= $username;
-            header('location: #');
+            header('location: adminapproval.php');
         }
         else{
             $_SESSION['message'] = "Login Failed";
