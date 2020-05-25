@@ -17,7 +17,7 @@
         if($count1 > 0){
             session_start();
             $row = $result1->fetch_assoc();
-            $_SESSION['firstnamespp2'] = $row['firstname'];
+            $_SESSION['firstnameapp2'] = $row['firstname'];
             $_SESSION['lastnameapp2'] = $row['lastname'];
             $_SESSION['emailapp2'] = $row['email'];
             $_SESSION['ageapp2'] = $row['age'] ;
