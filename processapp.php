@@ -11,8 +11,9 @@ if(isset($_POST['save']))
     $loanamountneeded = $_POST['loanamountneeded'];
     $purpose = $_POST['purpose'];
     $tenure = $_POST['tenure'];
+    $approval = "PENDING";
     
-    $sql = "INSERT INTO Loan_application(firstname,lastname,email,age,dateofbirth,monthlyincome,loanamountneeded,purpose,tenure) VALUES('$firstname','$lastname','$email','$age','$dateofbirth','$monthlyincome','$loanamountneeded','$purpose','$tenure')";
+    $sql = "INSERT INTO Loan_application(firstname,lastname,email,age,dateofbirth,monthlyincome,loanamountneeded,purpose,tenure,approval) VALUES('$firstname','$lastname','$email','$age','$dateofbirth','$monthlyincome','$loanamountneeded','$purpose','$tenure','$approval')";
      if(mysqli_query($conn,$sql)){
           session_start();
           $_SESSION['firstnameapp2'] = $_POST['firstname'];
@@ -24,7 +25,7 @@ if(isset($_POST['save']))
           $_SESSION['loanamountneededapp2'] = $_POST['loanamountneeded'];
           $_SESSION['purposeapp2'] = $_POST['purpose'];
           $_SESSION['tenureapp2'] = $_POST['tenure'];
-          echo '<script type="text/javascript">alert("New Application created successfully");</script>';
+          $_SESSION['message'] = "New Application created successfully";
           header("Location: application2.php");
      }
      mysqli_close($conn);

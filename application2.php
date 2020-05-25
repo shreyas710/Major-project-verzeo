@@ -1,5 +1,15 @@
 <?php
    session_start();
+   if(isset($_SESSION['message'])){
+    echo "<script type='text/javascript'>
+            alert('" . $_SESSION['message'] . "');
+          </script>";
+}
+if(isset($_SESSION['errorMessage11'])){
+     echo "<script type='text/javascript'>
+     alert('" . $_SESSION['errorMessage11'] . "');
+     </script>";
+}
 ?>
 
 <html>
